@@ -1,0 +1,13 @@
+Package: bartmix
+Type: Package
+Title: Environmental Mixture Analysis with BART
+Version: 0.1.0
+Authors@R: person("Ander", "Wilson", , "ander.wilson@colostate.edu", role=c("aut", "cre"),
+             comment = c("ORCID" = "0000-0003-4774-3883"))
+Maintainer: Ander Wilson <ander.wilson@colostate.edu>
+Description: Functions for environmental mixture analyses with Bayesian additive regression trees (BART). The included functions do posterior analyses that may be of interested in environmental mixture analyses. Many of the functions mimic what is typically done with Bayesian kernel machine regression. The package is designed to use output from BART models fit with the BART package.  
+License: GPL (>= 3)
+Imports: BART
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
