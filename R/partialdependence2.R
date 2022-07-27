@@ -45,18 +45,18 @@ partialdependence2 <- function(object,
   pred <- BART:::predict.wbart(object, x_partialplot)
 
   # summarize
-  partial <- matrix(nrow = nrow(pred), ncol = L)
+  partial <- matrix(nrow = nrow(pred), ncol = L*length(qtls))
   for(j in 1:L) {
     for(j2 in 1:length(qtls)){
       sset <- (j - 1) * n * length(qtls) + (j2 - 1) * n + 1:n
-      partial[, j] <- rowMeans(pred[, sset])
+      partial[, (j-1)*length(qtls)+j2] <- rowMeans(pred[, sset])
     }
   }
 
   # summarize results
   out <- data.frame(
-    x = rep(x,length(qtls)),
-    qtl = rep(qtls, each=L),
+    x = rep(x,each=length(qtls)),
+    qtl = rep(qtls, L),
     mean = colMeans(partial),
     lower = apply(partial,2,quantile,0.025),
     upper = apply(partial,2,quantile,0.975)
