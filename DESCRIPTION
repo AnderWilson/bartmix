@@ -1,6 +1,7 @@
 Package: bartmix
 Type: Package
 Title: Environmental Mixture Analysis with BART
+Date: 2024-06-03
 Version: 0.1.0
 Authors@R: person("Ander", "Wilson", , "ander.wilson@colostate.edu", role=c("aut", "cre"),
              comment = c("ORCID" = "0000-0003-4774-3883"))
